@@ -9,10 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.mlab as mlab
 
-def spectogram(audio_address):
-    
-    with open(audio_address, 'r') as R:
-        audio = np.asarray([int(i) for i in R])
+def spectogram(audio):
     
     sampling_rate = 44100
     S, freqs, times = mlab.specgram(audio, NFFT=4096, Fs=sampling_rate,
@@ -26,13 +23,12 @@ def spectogram(audio_address):
     
     Parameters 
     ----------------------------------------------------------------------
-    audio_address: [string]
-        the name of the text file in which the audio's data is stored in
-        the form of numbers
+    audio: [np array]
+        array of numbers containing information about audio
     
     Returns
     ----------------------------------------------------------------------
-    np.log(S): [array]
+    np.log(S): [np array]
         the clipped and logged version of the array that represents values
         of the spectogram"""
         
