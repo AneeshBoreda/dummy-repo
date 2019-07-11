@@ -5,7 +5,6 @@ Created on Thu Jul 11 15:27:35 2019
 @author: jiink
 """
 
-import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.mlab as mlab
 
