@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
-
-def sumlogs(array):
-    ''' This function finds the sum of the logs of the values in an array.
-    It also takes the absolute value to ignore logs of negatives
+def sumsquare(array):
+    ''' This function finds the sum of an array and squares it
     
     Parameters
     ---------
@@ -16,7 +8,7 @@ def sumlogs(array):
     
     Returns
     -------
-    The sum of all logs, floating point number
+    The sum squared, floating point number
     '''
     
-    return np.sum(np.log(np.abs(array)))
+    return np.sum(array)**2
